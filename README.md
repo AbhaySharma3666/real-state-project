@@ -43,23 +43,26 @@ npm install
 ```
 
 ### Running the Application
+- if you use console-ninja : use 2nd command 
 
 1. Start the API server:
 ```bash
 cd api
 npm start
+console-ninja node --env-file .env --watch app.js
 ```
 
 2. Start the client application:
 ```bash
 cd client
-npm start
+npm run dev
 ```
 
 3. Start the socket service:
 ```bash
 cd socket
 npm start
+console-ninja node --watch app.js
 ```
 
 ## Features
