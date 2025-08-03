@@ -1,0 +1,54 @@
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+
+  .content {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+    width: 100%;
+
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 5rem;
+      color: #fece51;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #fece51;
+      color: #333;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #ff8a00;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(254, 206, 81, 0.3);
+      }
+    }
+  }
+} 

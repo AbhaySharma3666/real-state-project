@@ -1,0 +1,211 @@
+@import "../../responsive.scss";
+
+.coming-soon {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+
+  .content {
+    background: white;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+
+    .animated-text {
+      margin-bottom: 40px;
+      
+      h1 {
+        font-size: 3rem;
+        color: #333;
+        margin-bottom: 20px;
+        animation: fadeInUp 1s ease;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .progress-bar {
+        width: 200px;
+        height: 4px;
+        background: #e9ecef;
+        border-radius: 2px;
+        margin: 20px auto;
+        overflow: hidden;
+
+        .progress {
+          width: 30%;
+          height: 100%;
+          background: #fece51;
+          animation: progress 2s ease-in-out infinite;
+        }
+      }
+    }
+
+    .description {
+      margin-bottom: 40px;
+      
+      p {
+        color: #666;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        animation: fadeInUp 1s ease 0.2s;
+        animation-fill-mode: both;
+      }
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+
+      .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        animation: fadeInUp 1s ease 0.4s;
+        animation-fill-mode: both;
+
+        .icon-wrapper {
+          width: 80px;
+          height: 80px;
+          background: #f8f9fa;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s ease;
+          border: 1px solid #e9ecef;
+
+          &:hover {
+            transform: scale(1.1);
+            background: #fece51;
+          }
+
+          .icon {
+            font-size: 2.5rem;
+          }
+        }
+
+        span {
+          color: #333;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .cta-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      .back-button {
+        display: inline-block;
+        padding: 15px 40px;
+        background: #fece51;
+        color: #333;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        animation: fadeInUp 1s ease 0.6s;
+        animation-fill-mode: both;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba(254, 206, 81, 0.3);
+        }
+      }
+
+      .social-links {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+
+        .social-link {
+          color: #666;
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #fece51;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@include md {
+  .coming-soon {
+    .content {
+      padding: 40px;
+      
+      .features {
+        gap: 30px;
+      }
+
+      .animated-text h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@include sm {
+  .coming-soon {
+    .content {
+      padding: 30px;
+      
+      .animated-text h1 {
+        font-size: 2rem;
+      }
+      
+      .features {
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .cta-section {
+        .social-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    }
+  }
+} 
