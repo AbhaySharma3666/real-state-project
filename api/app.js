@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-  res.send("Hello World from server");
+  res.send("Hello World from server main");
 });
 
 app.use("/api/auth", authRoute);
