@@ -9,12 +9,12 @@ nav {
   a {
     transition: all 0.4s ease;
 
-    @include sm {
-      display: none;
+    &:hover {
+      transform: scale(1.05);
     }
 
-    &:hover {
-      scale: 1.05;
+    @include sm {
+      display: none;
     }
   }
 
@@ -39,13 +39,13 @@ nav {
         @include md {
           display: none;
         }
-
         @include sm {
           display: initial;
         }
       }
     }
   }
+
   .right {
     flex: 2;
     display: flex;
@@ -69,10 +69,10 @@ nav {
       border: none;
       cursor: pointer;
       font-size: 16px;
-      transition: all 0.4s ease;
-      
+      transition: all 0.2s ease;
+
       &:hover {
-        scale: 1.05;
+        transform: scale(1.05);
       }
     }
 
@@ -86,12 +86,12 @@ nav {
       color: #333;
     }
 
-    .user{
+    .user {
       display: flex;
       align-items: center;
       font-weight: bold;
 
-      img{
+      img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -99,20 +99,20 @@ nav {
         margin-right: 20px;
       }
 
-      span{
-        @include sm{
+      span {
+        @include sm {
           display: none;
         }
       }
 
-      .profile{
+      .profile {
         padding: 12px 24px;
         background-color: #fece51;
         cursor: pointer;
         border: none;
         position: relative;
-        
-        .notification{
+
+        .notification {
           position: absolute;
           top: -8px;
           right: -8px;
@@ -125,7 +125,6 @@ nav {
           align-items: center;
           justify-content: center;
         }
-
       }
     }
 
@@ -171,14 +170,14 @@ nav {
         a {
           display: initial;
         }
-        
+
         button {
           display: initial;
           background-color: transparent;
           color: white;
           font-size: 24px;
           margin: 10px 0;
-          
+
           &.register-btn {
             background-color: #fece51;
             color: #333;
