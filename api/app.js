@@ -10,7 +10,7 @@ import messageRoute from "./routes/message.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: ["http://localhost:5173", "https://real-state-xk5z.onrender.com"], credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
